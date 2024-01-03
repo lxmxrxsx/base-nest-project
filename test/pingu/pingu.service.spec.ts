@@ -1,6 +1,6 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { PinguService } from '../../src/pingu/pingu.service';
-import { PinguRepository } from '../../src/pingu/pingu.repository';
+import { PinguService } from '../../src/pingu/service/pingu.service';
+import { PinguRepository } from '../../src/pingu/repository/pingu.repository';
 
 const mockRepository = () => ({});
 describe('PinguService', () => {

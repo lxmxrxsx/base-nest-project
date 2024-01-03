@@ -1,0 +1,25 @@
+version: '3.5'
+
+services:
+  pg:
+    image: postgres:latest
+    container_name: postgres
+    restart: always
+    volumes:
+      - ./database:/data/db
+    ports:
+      - "5432:5432"
+
+  app:
+    container_name: project-base-pinguim
+    image: project-base-pinguim-dev:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      DB_PORT: 5432
+      DB_DATABASE: db
+    ports:
+      - '3000:3000'
+    depends_on:
+      - pg
