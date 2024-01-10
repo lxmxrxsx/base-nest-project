@@ -1,4 +1,4 @@
-import { Pingu } from '../model/pingu.model';
+import { Pingu } from '../../model/pingu.model';
 
 export function updateBadge(pingu: Pingu) {
   if (pingu.isAngry) {

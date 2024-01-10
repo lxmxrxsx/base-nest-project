@@ -1,7 +1,7 @@
-import { Pingu } from '../model/pingu.model';
-import { CreatePinguResponse } from '../dto/create-pingu.response';
-import { PinguEntity } from '../repository/entities/pingu.entity';
-import { CreatePinguRequest } from '../dto/create-pingu.request';
+import { Pingu } from '../../model/pingu.model';
+import { CreatePinguResponse } from '../../api/controller/dto/create-pingu.response';
+import { PinguEntity } from '../../infrastructure/repository/entities/pingu.entity';
+import { CreatePinguRequest } from '../../api/controller/dto/create-pingu.request';
 
 export class PinguMapper {
   static toDomainFromEntity(entity: PinguEntity): Pingu {

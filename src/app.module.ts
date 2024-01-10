@@ -2,7 +2,9 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { configValidationSchema } from './config.schema';
-import { PinguModule } from './pingu/pingu.module';
+import { ApiModule } from './api/api.module';
+import { ApplicationModule } from './application/application.module';
+import { InfrastructureModule } from './infrastructure/infrastructure.module';
 
 @Module({
   imports: [
@@ -26,7 +28,9 @@ import { PinguModule } from './pingu/pingu.module';
         };
       },
     }),
-    PinguModule,
+    ApiModule,
+    ApplicationModule,
+    InfrastructureModule,
   ],
 })
 export class AppModule {}

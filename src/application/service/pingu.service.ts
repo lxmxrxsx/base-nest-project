@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
-import { UpdatePinguRequest } from '../dto/update-pingu.request';
-import { PinguRepository } from '../repository/pingu.repository';
+import { UpdatePinguRequest } from '../../api/controller/dto/update-pingu.request';
+import { PinguRepository } from '../../infrastructure/repository/pingu.repository';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CreatePinguResponse } from '../dto/create-pingu.response';
+import { CreatePinguResponse } from '../../api/controller/dto/create-pingu.response';
 import { updateBadge } from '../use-case/update-badge.use-case';
-import { Pingu } from '../model/pingu.model';
+import { Pingu } from '../../model/pingu.model';
 import { PinguMapper } from './pingu.mapper';
 
 @Injectable()

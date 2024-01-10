@@ -7,11 +7,11 @@ import {
   Param,
   Delete,
 } from '@nestjs/common';
-import { PinguService } from '../service/pingu.service';
-import { CreatePinguRequest } from '../dto/create-pingu.request';
-import { UpdatePinguRequest } from '../dto/update-pingu.request';
+import { PinguService } from '../../application/service/pingu.service';
+import { CreatePinguRequest } from './dto/create-pingu.request';
+import { UpdatePinguRequest } from './dto/update-pingu.request';
 import { ApiBody } from '@nestjs/swagger';
-import { PinguMapper } from '../service/pingu.mapper';
+import { PinguMapper } from '../../application/service/pingu.mapper';
 
 @Controller('pingu')
 export class PinguController {
